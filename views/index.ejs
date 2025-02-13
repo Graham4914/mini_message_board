@@ -14,12 +14,14 @@
     <h1>Mini Message Board</h1>
     <ul>
         <% messages.forEach(message=> { %>
-            <li><strong>
-                    <%= message.user %>:
+            <li>
+                <strong>
+                    <%= message.username %>:
                 </strong>
-                <%= message.text %> <em>(<%= message.added ? message.added.toLocaleString() : 'Unknown date' %>)</em>
+                <%= message.message %>
+                    <em>(<%= message.added ? message.added.toLocaleString() : 'Unknown date' %>)</em>
             </li>
-            <% }); %>
+            <% }) %>
     </ul>
     <a href="/new" class="action-btn">Add a New Message</a>
 </body>
