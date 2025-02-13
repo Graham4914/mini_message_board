@@ -17,7 +17,7 @@
             <li><strong>
                     <%= message.user %>:
                 </strong>
-                <%= message.text %> <em>(<%= message.added.toLocaleString() %>)</em>
+                <%= message.text %> <em>(<%= message.added ? message.added.toLocaleString() : 'Unknown date' %>)</em>
             </li>
             <% }); %>
     </ul>
